@@ -4,6 +4,7 @@ import 'package:food_delivery/utils/dimensions.dart';
 import 'package:food_delivery/widgets/app_column.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
+import 'package:food_delivery/widgets/expandable_text_widget.dart';
 import 'package:food_delivery/widgets/icon_and_text_widget.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 
@@ -74,7 +75,16 @@ class PopularFoodDetail extends StatelessWidget {
                       height: Dimensions.height20,
                     ),
                     BigText(text: 'Introduction'),
-
+                    SizedBox(height: Dimensions.height20,),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: ExpandableTextWidget(
+                          text: 'Chicken marinated in a spiced yoghurt is placed in a large pot,'
+                              'then layered with fried onions (cheeky easy sub below!), '
+                              'fresh coriander/cilantro, then parboiled with lightly spiced rice.'
+                        ),
+                      ),
+                    )
                   ],
                 ),
               )
